@@ -395,30 +395,30 @@ git revert [SHA]      #undoes all the changes in the specified commit
           </section>
           <section>
             <h3>Branching</h3>
-            <p>Create a new branch called version2</p>
+            <p>Create a new branch called feature_1</p>
             <pre><code contenteditable class ="command-line">
-git checkout -b version2
+git checkout -b feature_1
             </code></pre>
             <p>Add new lines to hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
 git add hello_world.txt
-git commit -m "Adding changes to version 2"
+git commit -m "Adding changes to feature_1"
             </code></pre>
           </section>
           <section>
             <h3>Branching</h3>
             <h4>Switching branches</h4>
-            <p>See all branches. Branch with * is active</p>
+            <p>See all branches. Branch with * is active.</p>
             <pre><code contenteditable class ="command-line">
 git branch
             </code></pre>
-            <p>Switch to master and look at hello_world.txt</p>
+            <p>Switch to master and look at hello_world.txt.</p>
             <pre><code contenteditable class ="command-line">
 git checkout master
             </code></pre>            
-            <p>Switch to version2 and look at hello_world.txt</p>
+            <p>Switch to feature_1 and look at hello_world.txt.</p>
             <pre><code contenteditable class ="command-line">
-git checkout version2
+git checkout feature_1
             </code></pre>
           </section>
         </section>
@@ -430,7 +430,7 @@ git checkout version2
             <p>Switch to master and merge changes</p>
             <pre><code contenteditable class ="command-line">
 git checkout master
-git merge version2
+git merge feature_1
             </code></pre>
             <p>*rebase is another option, but will not be covered in this workshop</p>
           </section>
@@ -442,25 +442,29 @@ git merge version2
 git add hello_world.txt
 git commit -m "Changing first line in master"
             </code></pre>
-            <p>Change first line in hello_world.txt in version2 branch</p>
+            <p>Change first line in hello_world.txt in feature_1 branch</p>
             <pre><code contenteditable class ="command-line">
-git checkout version2
+git checkout feature_1
 # open hello_world.txt and change first line
 git add hello_world.txt
-git commit -m "Changing first line in version2"
+git commit -m "Changing first line in feature_1"
             </code></pre>
           </section>
           <section>
             <h3>Merging</h3>
             <h4>Merge conflicts, cont.</h4>
-            <p>Merge master into version2</p>
+            <p>Merge master into feature_1</p>
             <pre><code contenteditable class ="command-line">
-# on version2 branch              
+# on feature_1 branch              
 git merge master
             </code></pre>
             <p>You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
             <p>Conflict resolved! </p>
-                       
+          </section>
+          <section>
+            <h3>Merging</h3>
+            <h4>Merge conflicts, cont.</h4>
+            <p>Note: somtimes, conflicts cause the files to automatically open in the Vim text editor. It looks just like a terminal window and has no obvious way to exit. Don't panic. Just type <strong>:q[enter]</strong> to exit it.<p>
           </section>
         </section>
         <!-- GitHub-->
