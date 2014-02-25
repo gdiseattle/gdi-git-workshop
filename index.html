@@ -144,7 +144,7 @@
           <ul>
             <li>Fast -- add to your team and code base quickly</li>
             <li>Distributed (see slide above) - you can work without a network connection </li>
-            <li>Each commit has a corresponding SHA (Secure Hash Algorithm, a.k.a hash)</li>
+            <li>Each commit has a unique identifier, a SHA (Secure Hash Algorithm, a.k.a hash)</li>
             <li>Everyone has a local copy of the history</li>
           </ul>
         </section>
@@ -453,11 +453,13 @@ git commit -m "Changing first line in version2"
           <section>
             <h3>Merging</h3>
             <h4>Merge conflicts, cont.</h4>
-            <p>Merge from master into version2</p>
+            <p>Merge master into version2</p>
             <pre><code contenteditable class ="command-line">
+# on version2 branch              
 git merge master
             </code></pre>
-            <p class ="fragment">You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
+            <p>You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
+            <p>Conflict resolved! </p>
                        
           </section>
         </section>
@@ -497,41 +499,39 @@ git merge master
           </section>
           <section>
             <h3>GitHub</h3>
-            <h4>Get Local Repository of GitHub Repo</h4>
+            <h4>Setting up remote connection</h4>
+            <p>Copy SSH link from Github repo</p>
+            <img src="images/clonelink.png" alt="link to clone repo" />
             <pre><code contenteditable class ="command-line">
-cd ../ # Back in root directory
-mkdir hello-github
-cd hello-github
-git init
-git remote add origin git@github.com:username/NAME-OF-REPO
-git pull origin master
+# cd into your local git repo
+git remote add origin [pasted link from Github]
+git pull origin master  #pull first, when creating connection
+git push origin master  #push your local work to the repo
             </code></pre>
-            <p class="fragment">Be careful not to create a new Git repo inside another Git repo. </p>
           </section>
           <section>
             <h3>GitHub</h3>
             <h4>Push to GitHub Repo</h4>
-            <p>Edit the ReadMe file
+            <p>As you make changes locally, push to Github.</p>
             <pre><code contenteditable class ="command-line">
+# edit README file              
 git add README
-git commit -m "Updating readme file"
+git commit -m "Update readme file"
 git push origin master
             </code></pre>
-            <p class ="fragment">Go look at your github repo online</p>
+            <p class ="fragment">Go look at your Github repo online.</p>
           </section>
           <section>
             <h3>GitHub</h3>
             <h4>Pulling from remote repository</h4>
             <p>If you are working with a team, you want to make sure that you have everyone's changes before pushing your changes to the GitHub repo</p>
             <pre><code contenteditable class ="command-line">
-# Commit local changes
+# make local changes
 git commit -m "My latest commit"
-# Pull changes other people have made
-git pull origin master
-# Fix any conflicts (see merge conflicts above) and commit
-git commit -m "Fixing merging conflicts"
-# push local changes to GitHub
-git push origin master
+git pull origin master  #pull current state from Github
+# fix any conflicts (see merge conflicts above) and commit
+git commit -m "Fix merge conflicts"
+git push origin master  # push local changes to GitHub
             </code></pre>
           </section>
         </section>
