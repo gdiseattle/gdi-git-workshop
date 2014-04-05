@@ -3,6 +3,7 @@ This is the official Girl Develop It Core Intro to Git and Github course. Materi
 
 The course is meant to be taught in a two-hour workshop. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
+Cheri's slides can be viewed [here](http://cherimarie.github.io/gdi-core-git-github/#/).
 
 ## Theme customization
 
