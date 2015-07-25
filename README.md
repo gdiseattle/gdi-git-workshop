@@ -1,6 +1,6 @@
 # GDI Core Intro to Git and Github
 
-Slides and materials are hosted at [http://girldevelopit.github.com/gdi-core-git-github](http://girldevelopit.github.com/gdi-core-git-github).
+Slides and materials are hosted at [http://gdiseattle.github.io/gdi-core-git-github/](http://gdiseattle.github.io/gdi-core-git-github/).
 
 ## Course description
 
@@ -10,12 +10,12 @@ Git is a popular version control application that can track your code changes, a
 
 **Cost:** 
 
-$40.00 for both classes
+ - $40.00 for both classes
 
 **Dates:** 
 
-Class 1: Tuesday, August 18, 7-9 pm 
-Class 2: Tuesday, August 25, 7-9 pm
+ - Class 1: Tuesday, August 18, 7-9 pm 
+ - Class 2: Tuesday, August 25, 7-9 pm
 
 **Location:** 
 
