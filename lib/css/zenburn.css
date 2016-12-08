@@ -90,7 +90,7 @@ pre .attr_selector,
 pre .pseudo,
 pre .apache .cbracket,
 pre .tex .formula {
-  color: #CC9393;
+  color: #eab5b5;
 }
 
 pre .shebang,
@@ -100,7 +100,7 @@ pre .java .annotation,
 pre .template_comment,
 pre .pi,
 pre .doctype {
-  color: #7F9F7F;
+  color: #a5cfa5;
 }
 
 pre .coffeescript .javascript,
@@ -112,3 +112,4 @@ pre .xml .css,
 pre .xml .cdata {
   opacity: 0.5;
 }
+
