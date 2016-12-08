@@ -181,14 +181,14 @@
 # I'm a comment! Don't enter me in command line. 
 # Do enter lines that start with a $, but don't type the $. 
 
+# Set the name git associates with your commits
 $ git config --global user.name "Your Name Here"
-# Sets the name git associates with your commits
           
+# Set the email git associates with your commits
 $ git config --global user.email "your_email@example.com"
-# Sets the email git associates with your commits
           
+# Show your configuration settings
 $ git config --list
-# Shows your configuration settings
           </code></pre>
         </section>
 
@@ -208,16 +208,17 @@ $ git config --list
         <section>
           <h3>Your first Local Repository</h3>
           <pre><code contenteditable class="command-line">
-# change to root/home directory
+# Change to your home directory
 cd ~
-#or
-cd Users\username
 
-# create and move to a "working directory"
+# OR
+cd
+
+# Create and move to a "working directory"
 mkdir my-repo
 cd my-repo
 
-#initialize directory as a Git repository
+# Initialize directory as a Git repository
 git init
           </code></pre>
         </section>
@@ -270,6 +271,7 @@ git log
   Date:   [DATE HERE]
 
       Added first file to repository.
+
             </code></pre>
           <p>Cool! We'll be using that SHA later...</p>
         </section>
@@ -286,12 +288,12 @@ git status
           <h3>Git flow</h3>
           <p>This is the general workflow in a Git repository</p>
           <pre><code contenteditable class="command-line">
-git init            #just once, to initialize
-      #do some stuff to files
-git status          #what's up, git?
-git add [filename]  #stage changes to a file
-git commit -m ""    #commit a set of changes
-git status          #what's up, git?
+git init            # Just once, to initialize
+      # Do some stuff to files
+git status          # What's up, git?
+git add [filename]  # Stage changes to a file
+git commit -m ""    # Commit a set of changes
+git status          # What's up, git?
           </code></pre>
         </section>
 
@@ -333,8 +335,8 @@ git rm -f hello.txt
           <h4>Undo staged changes</h4> 
             <p>If you've made some changes to <code>hello.txt</code> and staged it, but want the changes to disappear, run:</p>
             <pre><code contenteditable class="command-line">
-git reset hello.txt     #unstage
-git checkout hello.txt  #reset
+git reset hello.txt     # Unstage
+git checkout hello.txt  # Undo all my local changes
             </code></pre>
           <p><code>hello.txt</code> is unstaged and reset to its state at the last commit - your changes are gone!</p>
         </section>
@@ -345,8 +347,8 @@ git checkout hello.txt  #reset
           <div>
             <p>If you've made changes and committed them, you can revert all the changes that happened in a specific commit by running:</p>
             <pre><code contenteditable class="command-line">
-git log             #shows log of commits 
-git revert [SHA]    #undoes specified commit
+git log           # Display log of commits
+git revert [SHA]  # Un-does specified commit with opposite changes
             </code></pre>
             <p>This doesn't have to be your most recent commit- you can revert any commit. It will just undo the entire set of changes that were included in that commit.</p>
           </div>
@@ -358,8 +360,8 @@ git revert [SHA]    #undoes specified commit
           <div>
             <p>You can roll back your repo's state to where it was after any previous commit by running this with the SHA of the commit you'd like to reset to:</p>
             <pre><code contenteditable class="command-line">
-git log                 #shows log of commits 
-git reset --hard [SHA]  #resets repo 
+git log                  # Display log of commits
+git reset --hard [SHA]   # Reset the repo
             </code></pre>
           </div>
           <p>This rolls back all changes since the specified commit - be careful! This isn't often used in real life.</p>
@@ -478,12 +480,14 @@ git merge master
           <p>Copy SSH link from Github repo</p>
           <img src="img/clonelink.png" alt="link to clone repo" />
           <pre><code contenteditable class="command-line">
-# from inside your local git repo
+# From inside your local git repo
 git remote add origin [pasted link from Github]
+
+# Pull first, when creating connection
 git pull origin master  
-    #pull first, when creating connection
+
+# Push your local work to the repo
 git push origin master  
-    #push your local work to the repo
           </code></pre>
         </section>
 
@@ -504,9 +508,10 @@ git push origin master
           <h4>Pulling from remote repository</h4>
           <p>If you are working with a team, you want to make sure that you have everyone's changes before pushing your changes to the GitHub repo</p>
           <pre><code contenteditable class="command-line">
-#pull current state from Github
+# Pull current state from Github
 git pull origin master  
-# fix any conflicts (see merge conflicts above) and commit
+
+# Fix any conflicts (see merge conflicts above) and commit
 # then, push local changes to GitHub
 git push origin master 
           </code></pre>
@@ -561,11 +566,13 @@ cd FORKED-REPO-NAME
         <h3>Cloning</h3>
         <p>Add a remote connection to the <strong>original</strong> repository, so you can stay up to date with their changes:</p>
         <pre><code class="command-line">
+# Creates a remote connection, called "upstream",
+#   to the original repo on Github
 git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
-# creates a remote connection, called "upstream", to the original repo on Github
 
+# Pulls in changes not present in your local repository,
+#   without modifying your files
 git fetch upstream
-# Pulls in changes not present in your local repository, without modifying your files
         </code></pre>
         </section>
 
