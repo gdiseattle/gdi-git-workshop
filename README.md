@@ -1,28 +1,12 @@
-# GDI Core Intro to Git and Github
+# GDI Git Workshop (1-hour)
 
-Slides and materials are hosted at [http://gdiseattle.github.io/gdi-core-git-github/](http://gdiseattle.github.io/gdi-core-git-github/).
+Slides and materials are hosted at [http://gdiseattle.github.io/gdi-git-workshop/](http://gdiseattle.github.io/gdi-git-workshop/).
 
 ## Course description
 
 Ever make changes that broke your code and forgot how it was working before? Want to work together with someone on a code project, but aren't sure who has the latest version of a particular file? Version control can solve these and other problems!
 
 Git is a popular version control application that can track your code changes, as well as help you to be more methodical in your programming. Win-win! This session will introduce the basics of version control, how to use git to keep track of your changes to a project, and using GitHub (a hosting service) to collaborate with other developers.
-
-**Cost:** 
-
- - $40.00 for both classes
-
-**Dates:** 
-
- - Class 1: Tuesday, August 18, 7-9 pm 
- - Class 2: Tuesday, August 25, 7-9 pm
-
-**Location:** 
-
-NIRD HQ
-1517 12th Ave #201, Seattle, WA
-
-A limited number of scholarships are available for those with a financial hardship. To apply, contact us at seattle@girldevelopit.com
 
 ### Prerequisites:
 
