@@ -368,77 +368,32 @@ git reset --hard [SHA]   # Reset the repo
         </section>
 
         <!-- Branches-->
-        <section>
-          <h3>Branching</h3>
-          <ul>
-            <li>Develop different code on the same base</li>
-            <li>Conduct exploratory work without affecting the work on master branch</li>
-            <li>Incorporate changes to your master branch only when you are ready</li>
-          </ul>
-        </section>
 
         <section>
           <h3>Branching</h3>
-          <p>Create a new branch called <code>feature_1</code></p>
-          <pre><code contenteditable class="command-line haskell">
-git checkout -b feature_1
-          </code></pre>
-          <p>Make a change to <code>hello.txt</code>, then add and commit.</p>
-        </section>
-
-        <section>
-          <h3>Branching</h3>
-          <h4>Switching branches</h4>
-          <p>See all branches. Branch with <code>*</code> is active.</p>
-          <pre><code contenteditable class="command-line">
-git branch
-          </code></pre>
-          <p>Switch to the <code>master</code> branch.</p>
-          <pre><code contenteditable class="command-line">
-git checkout master
-          </code></pre>            
-          <p>You'll notice the changes from <code>feature_1</code> branch aren't there.</p>
-
-        </section>
-
-        <!-- Merging-->
-        <section>
-          <h3>Merging</h3>
-          <h4>Merge to get changes from one branch into another*</h4>
-          <p>Switch to <code>master</code> and merge in the <code>feature_1</code> branch</p>
-          <pre><code contenteditable class="command-line">
-git checkout master
-git merge feature_1
-          </code></pre>
-          <p>Now if you check out <code>hello.txt</code>, you'll see the changes you made in the <code>feature_1</code> branch.</p>
-          <p>*<code>rebase</code> is another option, but will not be covered in this workshop</p>
-        </section>
-
-  <!-- let's develop it! -->
-        <section>
-          <h3>Merging</h3>
-          <h4>Merge conflicts...</h4>
-          <p>Change first line in <code>hello.txt</code> in master branch, then add and commit it.</p>
-          <p>Then switch to the <code>feature_1</code> branch and change first line in <code>hello.txt</code>, and add and commit it.</p>
+          <div>
+            <p>Provide you with a separate space for you make changes.
+               It's part of how you collaborate with other people.
+            </p>
+            <ul>
+                <li>Focus on small changes</li>
+                <li>New features</li>
+                <li>Improve existing code </li>
+                <li>Hot Fixes &mdash; <strong>EMERGENCY!</strong></li>
+            </ul>
+          </div>
         </section>
 
         <section>
           <h3>Merging</h3>
-          <h4>Merge conflicts, cont.</h4>
-          <p>Merge the <code>master</code> branch into <code>feature_1</code> branch</p>
-          <pre><code contenteditable class="command-line">
-# on feature_1 branch              
-git merge master
-          </code></pre>
-          <p>You will be notified of a conflict. Go to the file, fix the problem and delete the helpful comments Git added. Then commit your edits.</p>
-          <p>Conflict resolved! </p>
+          <div>
+            <p>Combine your current branch with another branch</p>
+            <ul>
+                <li>Part of how you collaborate with other people</li>
+            </ul>
+          </div>
         </section>
 
-        <section>
-          <h3>Merging</h3>
-          <h4>Merge conflicts, cont.</h4>
-          <p>Note: somtimes, conflicts cause the files to automatically open in the Vim text editor. It looks just like a terminal window and has no obvious way to exit. Don't panic. Just type <code>:q[enter]</code> to exit it.<p>
-        </section>
 
         <!-- GitHub-->
         <section>
